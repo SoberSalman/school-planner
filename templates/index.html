@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI School Planner</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        // This Javascript function is used to toggle which filter dropdown is visible
+        function showFilter(filterType) {
+            // Hide all filter containers
+            document.getElementById('section-filter-container').style.display = 'none';
+            document.getElementById('teacher-filter-container').style.display = 'none';
+            document.getElementById('classroom-filter-container').style.display = 'none';
+            
+            // Show the selected one
+            const selectedContainer = document.getElementById(filterType + '-filter-container');
+            selectedContainer.style.display = 'block';
+            
+            // Trigger the change event on the newly visible select to update the timetable
+            selectedContainer.querySelector('select').dispatchEvent(new Event('change'));
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- LEFT COLUMN: CONTROLS -->
+        <div class="sidebar">
+            <h1>🎓 AI School Planner</h1>
+            <p>Generate and analyze school timetables with our advanced Hybrid Genetic Algorithm.</p>
+            
+            <form action="/" method="post">
+                <h2>1. Generate Schedule</h2>
+                <p>Click the button below to start the optimization process.</p>
+                <button type="submit">🚀 Generate Optimized Schedule</button>
+            </form>
+
+            {% if logs %}
+            <h2>Logs</h2>
+            <div class="logs"><pre><code>{{ logs }}</code></pre></div>
+            {% endif %}
+
+            <!-- Conflict Alerts Section -->
+            {% if conflicts %}
+            <h2>🚨 Conflict Alerts</h2>
+            <div class="conflicts">
+                {% for conflict in conflicts %}
+                <p>{{ conflict }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- RIGHT COLUMN: RESULTS -->
+        <div class="main-content">
+            {% if not schedule %}
+            <div class="placeholder">
+                <h2>Welcome!</h2>
+                <p>Use the controls on the left to generate a new schedule. The results, including timetables and analysis, will appear here.</p>
+            </div>
+            {% else %}
+            <!-- ANALYSIS SECTION -->
+            <h2>📈 Performance Dashboard</h2>
+            <div class="kpi-container">
+                <div class="kpi-card"><h3>Total Classes</h3><span>{{ analysis.kpi_total_classes }} hours</span></div>
+                <div class="kpi-card"><h3>Active Teachers</h3><span>{{ analysis.kpi_active_teachers }}</span></div>
+                <div class="kpi-card"><h3>Utilized Rooms</h3><span>{{ analysis.kpi_utilized_rooms }}</span></div>
+            </div>
+            
+            <!-- Resource Insights Section -->
+            <div class="insights-container">
+                <div class="insight-card warning">
+                    <h3>Potential Bottlenecks</h3>
+                    <p>Rooms with high utilization that may cause conflicts.</p>
+                    <ul>
+                    {% for room in analysis.high_demand_rooms %}
+                        <li>{{ room.classroom_name }} ({{ room.utilization_pct }}%)</li>
+                    {% else %}
+                        <li>None found.</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="insight-card info">
+                    <h3>Underutilized Assets</h3>
+                    <p>Rooms with low utilization that could be repurposed.</p>
+                    <ul>
+                    {% for room in analysis.low_demand_rooms %}
+                        <li>{{ room.classroom_name }} ({{ room.utilization_pct }}%)</li>
+                    {% else %}
+                        <li>None found.</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart">{{ analysis.teacher_workload_chart | safe }}</div>
+                <div class="chart">{{ analysis.room_util_chart | safe }}</div>
+            </div>
+
+            <!-- TIMETABLE SECTION -->
+            <h2>🗓️ Visual Timetable</h2>
+            <div class="filter-controls">
+                <span>View by:</span>
+                <button onclick="showFilter('section')">Grade/Section</button>
+                <button onclick="showFilter('teacher')">Teacher</button>
+                <button onclick="showFilter('classroom')">Classroom</button>
+            </div>
+
+            <!-- Filter Dropdowns -->
+            <div id="section-filter-container">
+                <select id="section-filter">
+                    {% for section in sections %}
+                    <option value="{{ section }}">{{ section }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div id="teacher-filter-container" style="display:none;">
+                <select id="teacher-filter">
+                    {% for teacher in teachers %}
+                    <option value="{{ teacher }}">{{ teacher }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div id="classroom-filter-container" style="display:none;">
+                <select id="classroom-filter">
+                    {% for room in classrooms %}
+                    <option value="{{ room }}">{{ room }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div id="timetable-grid-container"></div>
+            
+            <!-- Manual Override Placeholder Section -->
+            <h2>🛠️ Manual Override (Prototype)</h2>
+            <p>In a full application, this area would allow administrators to drag and drop classes to resolve any remaining minor conflicts or make specific adjustments. This demonstrates the system's flexibility.</p>
+            <div class="override-placeholder">
+                <p>Drag a class from the timetable here to unschedule it, or drag a new class assignment into an empty slot.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    {% if schedule %}
+    <script>
+        // Safely pass the schedule data from Jinja2 to Javascript
+        const scheduleData = {{ schedule | tojson | safe }};
+
+        // This function builds the HTML for the timetable grid based on the filtered data
+        function buildTimetable(filterType, filterValue) {
+            const container = document.getElementById('timetable-grid-container');
+            let filteredData;
+
+            // Filter the master schedule data based on the dropdown selection
+            if (filterType === 'section') {
+                filteredData = scheduleData.filter(item => item.section_full_name === filterValue);
+            } else if (filterType === 'teacher') {
+                filteredData = scheduleData.filter(item => item.teacher_name === filterValue);
+            } else { // classroom
+                filteredData = scheduleData.filter(item => item.classroom_name === filterValue);
+            }
+            
+            // Start building the HTML string
+            let html = "<div class='timetable-grid'>";
+            const headers = ["Time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+            headers.forEach(h => html += `<div class='grid-header'>${h}</div>`);
+            
+            // Use a JS object to act as a pivot table for fast lookups
+            const pivot = {}; 
+
+            // Populate the pivot object with formatted content for each class
+            filteredData.forEach(item => {
+                const key = `${item.time_slot}-${item.day_of_week}`;
+                let content = "";
+                // Customize cell content based on the filter type
+                if (filterType === 'section') {
+                    content = `<span class='subject'>${item.subject_name}</span><span class='teacher'>w/ ${item.teacher_name}</span><span class='room'>@ ${item.classroom_name}</span>`;
+                } else if (filterType === 'teacher') {
+                    content = `<span class='subject'>${item.subject_name}</span><span class='teacher'>for ${item.section_full_name}</span><span class='room'>@ ${item.classroom_name}</span>`;
+                } else {
+                    content = `<span class='subject'>${item.subject_name}</span><span class='teacher'>for ${item.section_full_name}</span><span class='room'>w/ ${item.teacher_name}</span>`;
+                }
+                pivot[key] = content;
+            });
+
+            // Loop through all possible slots and days to build the grid structure
+            for (let slot = 1; slot <= 8; slot++) {
+                html += `<div class='grid-timeslot'>Slot ${slot}</div>`;
+                for (let day = 1; day <= 5; day++) {
+                    const key = `${slot}-${day}`;
+                    // Use the content from the pivot object, or an empty string if no class is scheduled
+                    html += `<div class='grid-cell'>${pivot[key] || ''}</div>`;
+                }
+            }
+            html += "</div>";
+            // Set the final HTML to the container
+            container.innerHTML = html;
+        }
+
+        // Attach event listeners to all filter dropdowns
+        document.getElementById('section-filter').addEventListener('change', (e) => buildTimetable('section', e.target.value));
+        document.getElementById('teacher-filter').addEventListener('change', (e) => buildTimetable('teacher', e.target.value));
+        document.getElementById('classroom-filter').addEventListener('change', (e) => buildTimetable('classroom', e.target.value));
+        
+        // When the page first loads, show the 'section' filter and build the initial timetable
+        showFilter('section');
+    </script>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,352 @@
+section_id,subject_name,weekly_hours,required_classroom_type
+1,Mathematics,6.0,Normal Classroom
+1,English,7.0,Normal Classroom
+1,Science,3.0,Normal Classroom
+1,History,1.5,Normal Classroom
+1,Geography,1.0,Normal Classroom
+1,Physical Education (PE),3.0,PE Area
+1,Art,2.0,Normal Classroom
+1,Music,2.0,Normal Classroom
+1,Computer Science,1.5,Computer Lab
+1,Nutrition,1.0,Nutrition Kitchen
+1,Biology,0.0,Science Lab
+2,Mathematics,6.0,Normal Classroom
+2,English,7.0,Normal Classroom
+2,Science,3.0,Normal Classroom
+2,History,1.5,Normal Classroom
+2,Geography,1.0,Normal Classroom
+2,Physical Education (PE),3.0,PE Area
+2,Art,2.0,Normal Classroom
+2,Music,2.0,Normal Classroom
+2,Computer Science,1.5,Computer Lab
+2,Nutrition,1.0,Nutrition Kitchen
+2,Biology,0.0,Science Lab
+3,Mathematics,6.0,Normal Classroom
+3,English,7.0,Normal Classroom
+3,Science,3.0,Normal Classroom
+3,History,1.5,Normal Classroom
+3,Geography,1.0,Normal Classroom
+3,Physical Education (PE),3.0,PE Area
+3,Art,2.0,Normal Classroom
+3,Music,2.0,Normal Classroom
+3,Computer Science,1.5,Computer Lab
+3,Nutrition,1.0,Nutrition Kitchen
+3,Biology,0.0,Science Lab
+4,Mathematics,6.0,Normal Classroom
+4,English,6.0,Normal Classroom
+4,Science,4.0,Normal Classroom
+4,History,2.0,Normal Classroom
+4,Geography,1.5,Normal Classroom
+4,Physical Education (PE),3.0,PE Area
+4,Art,2.0,Normal Classroom
+4,Music,2.0,Normal Classroom
+4,Computer Science,1.5,Computer Lab
+4,Nutrition,1.0,Nutrition Kitchen
+4,Biology,1.0,Science Lab
+4,Chemistry,0.0,Science Lab
+5,Mathematics,6.0,Normal Classroom
+5,English,6.0,Normal Classroom
+5,Science,4.0,Normal Classroom
+5,History,2.0,Normal Classroom
+5,Geography,1.5,Normal Classroom
+5,Physical Education (PE),3.0,PE Area
+5,Art,2.0,Normal Classroom
+5,Music,2.0,Normal Classroom
+5,Computer Science,1.5,Computer Lab
+5,Nutrition,1.0,Nutrition Kitchen
+5,Biology,1.0,Science Lab
+5,Chemistry,0.0,Science Lab
+6,Mathematics,6.0,Normal Classroom
+6,English,6.0,Normal Classroom
+6,Science,4.0,Normal Classroom
+6,History,2.0,Normal Classroom
+6,Geography,1.5,Normal Classroom
+6,Physical Education (PE),3.0,PE Area
+6,Art,2.0,Normal Classroom
+6,Music,2.0,Normal Classroom
+6,Computer Science,1.5,Computer Lab
+6,Nutrition,1.0,Nutrition Kitchen
+6,Biology,1.0,Science Lab
+6,Chemistry,0.0,Science Lab
+7,Mathematics,6.0,Normal Classroom
+7,English,5.0,Normal Classroom
+7,Science,4.0,Normal Classroom
+7,History,2.5,Normal Classroom
+7,Geography,1.5,Normal Classroom
+7,Physical Education (PE),3.0,PE Area
+7,Art,1.5,Normal Classroom
+7,Music,1.5,Normal Classroom
+7,Computer Science,1.5,Computer Lab
+7,Nutrition,1.0,Nutrition Kitchen
+7,Biology,1.5,Science Lab
+8,Mathematics,6.0,Normal Classroom
+8,English,5.0,Normal Classroom
+8,Science,4.0,Normal Classroom
+8,History,2.5,Normal Classroom
+8,Geography,1.5,Normal Classroom
+8,Physical Education (PE),3.0,PE Area
+8,Art,1.5,Normal Classroom
+8,Music,1.5,Normal Classroom
+8,Computer Science,1.5,Computer Lab
+8,Nutrition,1.0,Nutrition Kitchen
+8,Biology,1.5,Science Lab
+9,Mathematics,6.0,Normal Classroom
+9,English,5.0,Normal Classroom
+9,Science,4.0,Normal Classroom
+9,History,2.5,Normal Classroom
+9,Geography,1.5,Normal Classroom
+9,Physical Education (PE),3.0,PE Area
+9,Art,1.5,Normal Classroom
+9,Music,1.5,Normal Classroom
+9,Computer Science,1.5,Computer Lab
+9,Nutrition,1.0,Nutrition Kitchen
+9,Biology,1.5,Science Lab
+10,Mathematics,6.0,Normal Classroom
+10,English,5.0,Normal Classroom
+10,Science,4.0,Normal Classroom
+10,History,3.0,Normal Classroom
+10,Geography,2.0,Normal Classroom
+10,Physical Education (PE),3.0,PE Area
+10,Art,1.5,Normal Classroom
+10,Music,1.5,Normal Classroom
+10,Computer Science,1.0,Computer Lab
+10,Biology,1.0,Science Lab
+10,Nutrition,1.0,Nutrition Kitchen
+11,Mathematics,6.0,Normal Classroom
+11,English,5.0,Normal Classroom
+11,Science,4.0,Normal Classroom
+11,History,3.0,Normal Classroom
+11,Geography,2.0,Normal Classroom
+11,Physical Education (PE),3.0,PE Area
+11,Art,1.5,Normal Classroom
+11,Music,1.5,Normal Classroom
+11,Computer Science,1.0,Computer Lab
+11,Biology,1.0,Science Lab
+11,Nutrition,1.0,Nutrition Kitchen
+12,Mathematics,6.0,Normal Classroom
+12,English,5.0,Normal Classroom
+12,Science,4.0,Normal Classroom
+12,History,3.0,Normal Classroom
+12,Geography,2.0,Normal Classroom
+12,Physical Education (PE),3.0,PE Area
+12,Art,1.5,Normal Classroom
+12,Music,1.5,Normal Classroom
+12,Computer Science,1.0,Computer Lab
+12,Biology,1.0,Science Lab
+12,Nutrition,1.0,Nutrition Kitchen
+13,Mathematics,6.0,Normal Classroom
+13,English,5.0,Normal Classroom
+13,Science,4.0,Normal Classroom
+13,History,3.0,Normal Classroom
+13,Geography,2.0,Normal Classroom
+13,Physical Education (PE),3.0,PE Area
+13,Art,1.5,Normal Classroom
+13,Music,1.5,Normal Classroom
+13,Computer Science,2.0,Computer Lab
+13,Biology,1.0,Science Lab
+13,Nutrition,1.0,Nutrition Kitchen
+13,Chemistry,0.0,Science Lab
+14,Mathematics,6.0,Normal Classroom
+14,English,5.0,Normal Classroom
+14,Science,4.0,Normal Classroom
+14,History,3.0,Normal Classroom
+14,Geography,2.0,Normal Classroom
+14,Physical Education (PE),3.0,PE Area
+14,Art,1.5,Normal Classroom
+14,Music,1.5,Normal Classroom
+14,Computer Science,2.0,Computer Lab
+14,Biology,1.0,Science Lab
+14,Nutrition,1.0,Nutrition Kitchen
+14,Chemistry,0.0,Science Lab
+15,Mathematics,6.0,Normal Classroom
+15,English,5.0,Normal Classroom
+15,Science,4.0,Normal Classroom
+15,History,3.0,Normal Classroom
+15,Geography,2.0,Normal Classroom
+15,Physical Education (PE),3.0,PE Area
+15,Art,1.5,Normal Classroom
+15,Music,1.5,Normal Classroom
+15,Computer Science,2.0,Computer Lab
+15,Biology,1.0,Science Lab
+15,Nutrition,1.0,Nutrition Kitchen
+15,Chemistry,0.0,Science Lab
+16,Mathematics,6.0,Normal Classroom
+16,English,5.0,Normal Classroom
+16,Science,4.0,Normal Classroom
+16,History,3.0,Normal Classroom
+16,Geography,2.0,Normal Classroom
+16,Physical Education (PE),3.0,PE Area
+16,Art,1.5,Normal Classroom
+16,Music,1.5,Normal Classroom
+16,Computer Science,2.0,Computer Lab
+16,Biology,1.0,Science Lab
+16,Nutrition,1.0,Nutrition Kitchen
+16,Chemistry,0.0,Science Lab
+17,Mathematics,6.0,Normal Classroom
+17,English,5.0,Normal Classroom
+17,Science,4.0,Normal Classroom
+17,History,3.0,Normal Classroom
+17,Geography,2.0,Normal Classroom
+17,Physical Education (PE),3.0,PE Area
+17,Art,1.5,Normal Classroom
+17,Music,1.5,Normal Classroom
+17,Computer Science,2.0,Computer Lab
+17,Biology,1.0,Science Lab
+17,Nutrition,1.0,Nutrition Kitchen
+17,Chemistry,0.0,Science Lab
+18,Mathematics,6.0,Normal Classroom
+18,English,5.0,Normal Classroom
+18,Science,4.0,Normal Classroom
+18,History,3.0,Normal Classroom
+18,Geography,2.0,Normal Classroom
+18,Physical Education (PE),3.0,PE Area
+18,Art,1.5,Normal Classroom
+18,Music,1.5,Normal Classroom
+18,Computer Science,2.0,Computer Lab
+18,Biology,1.0,Science Lab
+18,Nutrition,1.0,Nutrition Kitchen
+18,Chemistry,0.0,Science Lab
+19,Mathematics,6.0,Normal Classroom
+19,English,5.0,Normal Classroom
+19,Science,4.0,Normal Classroom
+19,History,3.0,Normal Classroom
+19,Geography,2.0,Normal Classroom
+19,Physical Education (PE),3.0,PE Area
+19,Art,1.5,Normal Classroom
+19,Music,1.5,Normal Classroom
+19,Computer Science,2.0,Computer Lab
+19,Biology,1.0,Science Lab
+19,Chemistry,0.5,Science Lab
+19,Nutrition,1.0,Nutrition Kitchen
+20,Mathematics,6.0,Normal Classroom
+20,English,5.0,Normal Classroom
+20,Science,4.0,Normal Classroom
+20,History,3.0,Normal Classroom
+20,Geography,2.0,Normal Classroom
+20,Physical Education (PE),3.0,PE Area
+20,Art,1.5,Normal Classroom
+20,Music,1.5,Normal Classroom
+20,Computer Science,2.0,Computer Lab
+20,Biology,1.0,Science Lab
+20,Chemistry,0.5,Science Lab
+20,Nutrition,1.0,Nutrition Kitchen
+21,Mathematics,6.0,Normal Classroom
+21,English,5.0,Normal Classroom
+21,Science,4.0,Normal Classroom
+21,History,3.0,Normal Classroom
+21,Geography,2.0,Normal Classroom
+21,Physical Education (PE),3.0,PE Area
+21,Art,1.5,Normal Classroom
+21,Music,1.5,Normal Classroom
+21,Computer Science,2.0,Computer Lab
+21,Biology,1.0,Science Lab
+21,Chemistry,0.5,Science Lab
+21,Nutrition,1.0,Nutrition Kitchen
+22,Mathematics,6.0,Normal Classroom
+22,English,5.0,Normal Classroom
+22,Science,4.0,Normal Classroom
+22,History,3.0,Normal Classroom
+22,Geography,2.0,Normal Classroom
+22,Physical Education (PE),3.0,PE Area
+22,Art,1.5,Normal Classroom
+22,Music,1.5,Normal Classroom
+22,Computer Science,2.0,Computer Lab
+22,Biology,1.0,Science Lab
+22,Chemistry,1.0,Science Lab
+22,Nutrition,1.0,Nutrition Kitchen
+23,Mathematics,6.0,Normal Classroom
+23,English,5.0,Normal Classroom
+23,Science,4.0,Normal Classroom
+23,History,3.0,Normal Classroom
+23,Geography,2.0,Normal Classroom
+23,Physical Education (PE),3.0,PE Area
+23,Art,1.5,Normal Classroom
+23,Music,1.5,Normal Classroom
+23,Computer Science,2.0,Computer Lab
+23,Biology,1.0,Science Lab
+23,Chemistry,1.0,Science Lab
+23,Nutrition,1.0,Nutrition Kitchen
+24,Mathematics,6.0,Normal Classroom
+24,English,5.0,Normal Classroom
+24,Science,4.0,Normal Classroom
+24,History,3.0,Normal Classroom
+24,Geography,2.0,Normal Classroom
+24,Physical Education (PE),3.0,PE Area
+24,Art,1.5,Normal Classroom
+24,Music,1.5,Normal Classroom
+24,Computer Science,2.0,Computer Lab
+24,Biology,1.0,Science Lab
+24,Chemistry,1.0,Science Lab
+24,Nutrition,1.0,Nutrition Kitchen
+25,Mathematics,6.0,Normal Classroom
+25,English,5.0,Normal Classroom
+25,Biology,4.0,Science Lab
+25,Chemistry,3.0,Science Lab
+25,Physics,2.0,Science Lab
+25,History,3.0,Normal Classroom
+25,Geography,2.0,Normal Classroom
+25,Physical Education (PE),3.0,PE Area
+25,Computer Science,2.0,Computer Lab
+25,Art,1.0,Normal Classroom
+25,Music,1.0,Normal Classroom
+25,Nutrition,1.0,Nutrition Kitchen
+26,Mathematics,6.0,Normal Classroom
+26,English,5.0,Normal Classroom
+26,Biology,4.0,Science Lab
+26,Chemistry,3.0,Science Lab
+26,Physics,2.0,Science Lab
+26,History,3.0,Normal Classroom
+26,Geography,2.0,Normal Classroom
+26,Physical Education (PE),3.0,PE Area
+26,Computer Science,2.0,Computer Lab
+26,Art,1.0,Normal Classroom
+26,Music,1.0,Normal Classroom
+26,Nutrition,1.0,Nutrition Kitchen
+27,Mathematics,6.0,Normal Classroom
+27,English,5.0,Normal Classroom
+27,Biology,4.0,Science Lab
+27,Chemistry,3.0,Science Lab
+27,Physics,2.0,Science Lab
+27,History,3.0,Normal Classroom
+27,Geography,2.0,Normal Classroom
+27,Physical Education (PE),3.0,PE Area
+27,Computer Science,2.0,Computer Lab
+27,Art,1.0,Normal Classroom
+27,Music,1.0,Normal Classroom
+27,Nutrition,1.0,Nutrition Kitchen
+28,Mathematics,6.0,Normal Classroom
+28,English,5.0,Normal Classroom
+28,Biology,4.0,Science Lab
+28,Physics,3.0,Science Lab
+28,Chemistry,3.0,Science Lab
+28,History,3.0,Normal Classroom
+28,Geography,2.0,Normal Classroom
+28,Physical Education (PE),3.0,PE Area
+28,Computer Science,2.0,Computer Lab
+28,Art,1.0,Normal Classroom
+28,Music,1.0,Normal Classroom
+28,Nutrition,1.0,Nutrition Kitchen
+29,Mathematics,6.0,Normal Classroom
+29,English,5.0,Normal Classroom
+29,Biology,4.0,Science Lab
+29,Physics,3.0,Science Lab
+29,Chemistry,3.0,Science Lab
+29,History,3.0,Normal Classroom
+29,Geography,2.0,Normal Classroom
+29,Physical Education (PE),3.0,PE Area
+29,Computer Science,2.0,Computer Lab
+29,Art,1.0,Normal Classroom
+29,Music,1.0,Normal Classroom
+29,Nutrition,1.0,Nutrition Kitchen
+30,Mathematics,6.0,Normal Classroom
+30,English,5.0,Normal Classroom
+30,Biology,4.0,Science Lab
+30,Physics,3.0,Science Lab
+30,Chemistry,3.0,Science Lab
+30,History,3.0,Normal Classroom
+30,Geography,2.0,Normal Classroom
+30,Physical Education (PE),3.0,PE Area
+30,Computer Science,2.0,Computer Lab
+30,Art,1.0,Normal Classroom
+30,Music,1.0,Normal Classroom
+30,Nutrition,1.0,Nutrition Kitchen
